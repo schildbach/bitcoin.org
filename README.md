@@ -1,87 +1,27 @@
-# Requirements
+# Welcome to Bitcoin.org's Codebase
 
-Installing dependencies
+Current Build Status: ![Build Status](https://travis-ci.org/bitcoin-dot-org/bitcoin.org.svg?branch=master)
 
-    sudo apt-get install rubygems ruby1.9.1-dev build-essential
-    sudo gem install jekyll aquarium json less therubyracer
+Live site: [Bitcoin.org](https://bitcoin.org)
 
-# Usage
+Report problems or help improve the site by opening a [new issue](https://github.com/bitcoin-dot-org/bitcoin.org/issues/new) or [pull request](https://github.com/bitcoin-dot-org/bitcoin.org/compare).
 
-* update DOWNLOAD\_VERSION in _config.yml
-* run ./_contrib/updatesitemap if you changed a page
-* run jekyll
-* output will be in \_site/
+## How to Participate
+The following quick guides will help you get started:
 
-# Translation
++ [Becoming a Contributor](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/become-a-contributor.md)
++ [Working with GitHub](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/working-with-github.md)
++ [Setting Up Your Environment](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/setting-up-your-environment.md)
++ [Improving Developer Documentation](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/contributing-to-developer-documentation.md)
++ [Assisting with Translations](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/assisting-with-translations.md)
++ [Managing Wallets](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/managing-wallets.md)
++ [Adding Events, Release Notes and Alerts](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/adding-events-release-notes-and-alerts.md)
++ [Adding Blog Posts](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/adding-blog-posts.md)
++ [Miscellaneous / Other](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/docs/miscellaneous.md)
 
-* Find the two letter ISO 639-1 code for your language (fr, en, jp)
-* Run ./_contrib/translate (language code) (language name)
-* Make sure that languages are listed in alphabetical order in _config.yml
-* Rename html files in (lang)/ according to your language. And update links in _layouts/base-(lang).html and (lang)/*.html to reflect your changes.
-* Translate all .html and images files in (lang)/ and _layouts/base-(lang).html
-* A tips for translators, you can preview your work in a simple Google chrome browser with no HTTP server. Just go to the existing english page, open the javascript console with CTRL + SHIFT + J and use the following command to make the page editable : document.body.contentEditable=true
+### Code of Conduct
 
-## Advanced Usage
+Participation in this project is subject to a [Code of Conduct](https://github.com/bitcoin-dot-org/bitcoin.org/blob/master/CODE_OF_CONDUCT.md).
 
-### Alerts
-
-You can easily put a global alert on the website by changing the ALERT and ALERT\_CLASS variables in _config.yml.
-And you can also set an alert specific to a language by appending the language code to the ALERT.
-
-Example:
-
-```
-ALERT_CLASS: error
-ALERT: <strong>Security alert:</strong> Please upgrade to 0.3.25 as soon as possible!
-ALERT_fr: <strong>Alerte de sécurité:</strong> Mettez Bitcoin à jour vers la version 0.3.25 sans délais!
-```
-
-will produce an english red alert box for all languages, and a translated red alert box for french language.
-Possible classes are: error (red), info (blue), success (green) and warning (yellow)
-
-### Release Notes
-
-Release notes should be placed in `_posts/releases/YEAR-MONTH-DAY-SHORTTITLE.md` and adhere to this format:
-
-```
----
-layout: post
-title: Bitcoin version 0.3.24 released
-src: http://sourceforge.net/mailarchive/message.php?msg_id=27771039
-category: releases
----
-
-Bitcoin v0.3.24 is now available for download at
-<https://sourceforge.net/projects/bitcoin/files/Bitcoin/bitcoin-0.3.24/>
-
-...
-```
-* `SHORTTITLE` is used to construct the URL. Something like `v0.3.24` will be fine
-* `layout: post` important for Jekyll
-* `title: ...` will be used as the title
-* `src: ...` (optional) link to full annoucement
-* `category: ...` category of post
-** `releases`
-** `events`
-
-### Aliases for contributors
-
-Aliases for contributors are defined in ```_config.yml```.
-
-```
-aliases:
-  s_nakamoto: Satoshi Nakamoto
-  --author=Satoshi Nakamoto: Satoshi Nakamoto
-  gavinandresen: Gavin Andresen
-```
-
-# Requirements
-
-These ruby gems are required to build the website:
-
-* jekyll
-* aquarium
-* json
-* less
-* therubyracer
-
+### Questions?
+Please contact Will Binns ([will@bitcoin.org](mailto:will@bitcoin.org)) if you need help.

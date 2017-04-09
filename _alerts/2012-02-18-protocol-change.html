@@ -1,0 +1,41 @@
+---
+title: "February 20, 2012 Protocol Changes"
+shorturl: "feb20"
+active: false
+banner: ""
+date: 2012-02-18
+---
+<p>
+In June 2010 the Bitcoin reference software version 0.2.10 introduced
+a change to the protocol: the 'version' messages exchanged by nodes
+at connection time would have a new format that included checksum
+values to detect corruption by broken networks.
+</p><p>
+All other messages already carry a checksum (for connections between
+nodes 0.2.9 and later) but the version messages themselves could not
+be changed in a compatible way, so this change was delayed and did not take effect until
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=Bitcoin+protocol+change&amp;iso=20120220T00">midnight UTC on Feb 20th 2012</a>
+to leave users time to upgrade.
+</p><p>
+The developers of the Bitcoin reference software are unable to find
+any evidence of any nodes still running software prior to 0.2.10 on
+the network. If any nodes with software this old
+do still exist, they will no longer be able to connect to newer nodes.
+</p><p>
+This switchover has been tested and no significant disruption is
+expected and none has been observed so far.
+Nodes with incorrect clocks may have a difficult
+time making new connections for a brief period around the switchover
+time. 
+</p><p>
+Please report any new connectivity issues to the <a
+href="http://webchat.freenode.net/?channels=bitcoin-dev&amp;uio=d4">#bitcoin-dev
+channel</a> on Freenode IRC.
+</p><p>
+If there are unexpected difficulties this page will be updated with
+relevant information.
+</p>
+
+<div style="text-align:right">
+  <i>This notice last updated: Mon, 20 Feb 2012 00:10:00 UTC</i>
+</div>

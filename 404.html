@@ -1,0 +1,20 @@
+---
+# This file is licensed under the MIT License (MIT) available on
+# http://opensource.org/licenses/MIT.
+
+layout: base
+lang: en
+id: index
+title: Bitcoin
+---
+<script>
+//Auto redirect to the appropriate language
+var langs={};{% for lang in site.langs %}{% if lang[0] != page.lang %}langs['{{ lang[0] }}']=true;{% endif %}{% endfor %}
+var lang=(navigator.language)?navigator.language:navigator.userLanguage;
+lang=lang.split('_')[0];
+if(!langs[lang])lang='en';
+window.location.href='/'+lang+'/';
+</script>
+<!--Fallback page, don't allow indexing-->
+<meta name="robots" content="noindex">
+{% include templates/index.html %}
